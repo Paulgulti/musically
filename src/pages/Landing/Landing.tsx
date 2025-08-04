@@ -119,7 +119,7 @@ export default function Landing() {
 
   // Fetch mock tracks from a JSON file
   useEffect(() => {
-    fetch("/src/dummyfile.json")
+    fetch("/dummyfile.json")
       .then((res) => res.json())
       .then((data) => {
         setTracks(data);
