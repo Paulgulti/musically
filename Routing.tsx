@@ -1,14 +1,14 @@
 // src/AppRouter.tsx or src/routes/index.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './src/components/dataprovider/AuthContext';
 import ProtectedRoute from './src/components/ProtectedRoute';
 import PublicOnlyRoute from './src/components/PublicOnlyRoute';
 
+import PlaylistDetailPage from './src/components/PlaylistDetailPage';
+import DashboardPage from './src/pages/dashboard/DashboardPage';
 import LandingPage from './src/pages/Landing/Landing';
 import LoginPage from './src/pages/login/Login';
-import DashboardPage from './src/pages/dashboard/DashboardPage';
 import SignUp from './src/pages/signup/SignUp';
-import PlaylistDetailPage from './src/components/PlaylistDetailPage';
 
 
 export default function AppRouter() {
