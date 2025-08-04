@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Style from './login.module.css'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../../../utility/firebase'
-import { signInWithEmailAndPassword } from 'firebase/auth'
 import Navigation from '../../components/Navigation'
+import Style from './login.module.css'
 
 
 export default function Login() {
@@ -30,6 +30,8 @@ export default function Login() {
       setError(err.message)
     })
 
+    console.log(error);
+    
   }
   return (
     <div className={Style.bg} >

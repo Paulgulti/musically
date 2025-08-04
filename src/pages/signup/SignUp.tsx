@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
-import Style from './signup.module.css'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import {auth} from '../../../utility/firebase'
-import {createUserWithEmailAndPassword} from 'firebase/auth'
+import { auth } from '../../../utility/firebase'
 import Navigation from '../../components/Navigation'
+import Style from './signup.module.css'
 
 export default function SignUp() {
 
@@ -29,6 +29,8 @@ export default function SignUp() {
     setError(err.message)
    })
   }
+  console.log(error);
+  
   return (
    <div className={Style.bg} >
      <Navigation />
